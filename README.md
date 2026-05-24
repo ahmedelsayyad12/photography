@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cinematic Photography Portfolio
+
+A premium, award-level photography portfolio built with Next.js, Framer Motion, GSAP ScrollTrigger, and Lenis smooth scrolling.
+
+## Tech Stack
+
+- **Next.js 16** (App Router)
+- **React 19** + **TypeScript**
+- **Tailwind CSS v4**
+- **Framer Motion** — UI animations
+- **GSAP + ScrollTrigger** — horizontal scroll storytelling
+- **Lenis** — smooth scrolling
+- **Three.js + React Three Fiber** — WebGL image transitions
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/              # Layout, page, global styles
+├── components/       # UI sections & effects
+├── data/             # Mock photography content
+├── hooks/            # Reusable hooks
+├── lib/              # Utilities
+└── types/            # TypeScript types
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Sections
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Hero — cinematic fullscreen intro
+2. Featured Showcase — curated editorial grid
+3. Gallery — masonry layout with filtering & modal
+4. Horizontal Scroll — GSAP pinned storytelling
+5. About — portrait, stats, timeline
+6. Collections — category cards
+7. Behind The Lens — process imagery
+8. Awards & Publications
+9. Testimonials — carousel
+10. Contact — inquiry form
+11. Footer
 
-## Deploy on Vercel
+## Museum 3D Experience
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **`MuseumBackdrop`** — site-wide ambient 3D photo orbit (subtle, scroll-driven camera)
+- **`GalleryTunnelSection`** — signature scroll-through 3D gallery tunnel (sticky + GSAP scrub)
+- Cinematic camera dolly, fog, stars, floating sculptures
+- Falls back to 2D grid on mobile / reduced motion
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Features
+
+- Custom cursor (desktop)
+- Magnetic buttons
+- **WebGL gallery modal** — liquid distortion, RGB shift, crossfade transitions
+- **Cinematic intro** — mask reveal, skippable, respects reduced motion
+- **Canvas film grain** + layered SVG noise textures
+- **Dynamic lighting** — mouse-follow spotlight + scroll-reactive bloom
+- **Scroll velocity effects** — subtle scale/skew from Lenis velocity
+- **Ambient sound toggle** — Web Audio drone (muted by default, persisted)
+- **Page transitions** — cinematic route mask via `template.tsx`
+- **Layout engine** — 4 editorial presets (cinematic, split, minimal, collage)
+- Reduced motion support
+- Keyboard navigation in gallery modal
+- Lazy-loaded images with blur placeholders
+- SEO metadata
+
+## Customization
+
+Edit `src/data/photography.ts` to update copy, images, and categories. Replace Unsplash URLs with your own photography hosted locally or on a CDN.
+
+Update `next.config.ts` `images.remotePatterns` for external image domains.
