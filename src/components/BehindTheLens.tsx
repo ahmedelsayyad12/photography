@@ -6,15 +6,15 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 const btsImages = [
   {
-    src: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800&q=75",
     caption: "On location — Iceland",
   },
   {
-    src: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=75",
     caption: "Studio setup — Brooklyn",
   },
   {
-    src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=75",
     caption: "Golden hour scouting",
   },
 ];
@@ -44,6 +44,14 @@ export function BehindTheLens() {
               locations at dawn, building light setups by hand, and waiting for
               that fleeting moment when everything aligns — this is where the
               magic lives.
+            </p>
+            <p className="mt-6 max-w-lg text-sm leading-relaxed text-[var(--muted)]">
+              The process blends cinematic photography techniques with editorial
+              discipline: reference boards, wardrobe coordination, tethered
+              review on set, and final color grading that preserves skin texture
+              and atmosphere. Whether the brief is a luxury lookbook or an
+              intimate portrait session, the goal is the same — images that feel
+              directed, not accidental.
             </p>
             <ul className="mt-8 space-y-4 text-sm text-[var(--muted)]">
               <li className="flex items-center gap-3">

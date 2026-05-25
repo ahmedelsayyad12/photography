@@ -9,7 +9,7 @@ import { FloatingDepth } from "@/components/fx/FloatingDepth";
 import { CinematicText } from "@/components/fx/CinematicText";
 
 const portrait =
-  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=85";
+  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=75";
 
 function StatItem({
   label,
@@ -93,10 +93,20 @@ export function About() {
               documentary storytelling — always guided by light, emotion, and
               the quiet drama of a single frame.
             </p>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-[var(--muted)]">
+              Clients hire me for cinematic photography that reads on billboards
+              and in print equally well: controlled studio sessions, on-location
+              fashion campaigns, wedding weekends abroad, and street series that
+              capture cities without cliché. I collaborate with art directors,
+              stylists, and couples who value preparation, patience, and a
+              distinctive point of view.
+            </p>
             <p className="mt-6 max-w-xl text-sm leading-relaxed text-[var(--muted)]">
               From Vogue editorials to destination weddings in Tuscany, each
               project is approached with the same reverence: as a chance to
-              create something timeless.
+              create something timeless. Explore the gallery for portraits,
+              fashion, weddings, and editorial work, or reach out to discuss
+              your next commission.
             </p>
 
             <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-4">

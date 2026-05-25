@@ -13,6 +13,7 @@ import { Footer } from "@/components/Footer";
 import { SectionReveal } from "@/components/fx/SectionReveal";
 import { PortalTransition } from "@/components/fx/PortalTransition";
 import { GalleryTunnelSection } from "@/components/museum/GalleryTunnelSection";
+import { SiteIntro } from "@/components/seo/SiteIntro";
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
         <PortalTransition moodId="hero">
           <Hero />
         </PortalTransition>
+
+        <SiteIntro />
 
         <GalleryTunnelSection />
 

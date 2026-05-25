@@ -21,9 +21,10 @@ const WebGLImage = dynamic(
 );
 
 const heroImage =
-  "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1920&q=90";
+  "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1600&q=75";
 
-const titleWords = ["Cinematic", "Stories", "In", "Light"];
+/** Primary keyword in the single page <h1> (SEO). */
+const titleWords = ["Cinematic", "Photography"];
 
 export function Hero() {
   const mounted = useMounted();
@@ -176,6 +177,14 @@ export function Hero() {
             </span>
           ))}
         </h1>
+        <p
+          className={cn(
+            "mt-4 max-w-xl font-serif text-xl text-[var(--muted)] md:text-2xl",
+            isCentered && "mx-auto text-center"
+          )}
+        >
+          Visual stories in light
+        </p>
 
         <motion.div
           className={cn(
@@ -193,8 +202,9 @@ export function Hero() {
               isCentered && "text-center"
             )}
           >
-            Award-winning photographer crafting visual narratives at the
-            intersection of fashion, emotion, and cinematic light.
+            {siteConfig.name} is an award-winning cinematic photographer
+            creating fashion editorials, portraits, weddings, and editorial
+            campaigns at the intersection of cinema, emotion, and light.
           </p>
           <div className="flex items-center gap-8 text-xs tracking-[0.3em] uppercase text-[var(--muted)]">
             <span>{siteConfig.location}</span>

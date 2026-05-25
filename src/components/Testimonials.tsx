@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { testimonials } from "@/data/photography";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { suppressExtensionHydration } from "@/lib/suppress-extension-hydration";
 
 export function Testimonials() {
   const [index, setIndex] = useState(0);
@@ -79,6 +80,7 @@ export function Testimonials() {
 
           <div className="mt-12 flex items-center justify-center gap-4">
             <button
+              {...suppressExtensionHydration}
               type="button"
               onClick={prev}
               className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 transition-colors hover:border-[var(--accent)]/50"
@@ -90,6 +92,7 @@ export function Testimonials() {
             <div className="flex gap-2" role="tablist" aria-label="Testimonial navigation">
               {testimonials.map((_, i) => (
                 <button
+                  {...suppressExtensionHydration}
                   key={i}
                   type="button"
                   role="tab"
@@ -105,6 +108,7 @@ export function Testimonials() {
               ))}
             </div>
             <button
+              {...suppressExtensionHydration}
               type="button"
               onClick={next}
               className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 transition-colors hover:border-[var(--accent)]/50"

@@ -8,6 +8,7 @@ import { MagneticButton } from "./MagneticButton";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { suppressExtensionHydration } from "@/lib/suppress-extension-hydration";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -132,6 +133,7 @@ export function Contact() {
                 Project Type
               </span>
               <select
+                {...suppressExtensionHydration}
                 name="project"
                 className="border-b border-white/10 bg-transparent py-3 text-[var(--foreground)] outline-none transition-colors focus:border-[var(--accent)]"
                 defaultValue=""
@@ -151,6 +153,7 @@ export function Contact() {
                 Message
               </span>
               <textarea
+                {...suppressExtensionHydration}
                 name="message"
                 rows={4}
                 required

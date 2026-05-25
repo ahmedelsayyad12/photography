@@ -1,4 +1,4 @@
-import { siteConfig, navLinks } from "@/data/photography";
+import { siteConfig } from "@/data/photography";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -6,30 +6,16 @@ export function Footer() {
   return (
     <footer className="border-t border-white/5 py-12 md:py-16">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
-        <div className="flex flex-col gap-12 md:flex-row md:items-end md:justify-between">
+        <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="font-serif text-3xl text-[var(--foreground)] md:text-4xl">
               {siteConfig.name}
             </p>
-            <p className="mt-2 text-sm text-[var(--muted)]">
-              {siteConfig.tagline}
+            <p className="mt-2 max-w-md text-sm leading-relaxed text-[var(--muted)]">
+              {siteConfig.tagline} — fashion, portraits, weddings, and editorial
+              photography worldwide.
             </p>
           </div>
-
-          <nav aria-label="Footer navigation">
-            <ul className="flex flex-wrap gap-6">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="text-xs tracking-[0.2em] uppercase text-[var(--muted)] transition-colors hover:text-[var(--foreground)]"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
         </div>
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/5 pt-8 md:flex-row md:items-center md:justify-between">

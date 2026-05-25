@@ -8,6 +8,7 @@ import type { GalleryCategory, Photo } from "@/types";
 import { GalleryWebGLModal } from "@/components/webgl/GalleryWebGLModal";
 import { GalleryItem } from "@/components/GalleryItem";
 import { cn } from "@/lib/utils";
+import { suppressExtensionHydration } from "@/lib/suppress-extension-hydration";
 
 const categories: GalleryCategory[] = [
   "all",
@@ -77,6 +78,7 @@ export function Gallery() {
           >
             {categories.map((cat) => (
               <button
+                {...suppressExtensionHydration}
                 key={cat}
                 type="button"
                 role="tab"

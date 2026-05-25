@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { useMagnetic } from "@/hooks/useMagnetic";
+import { suppressExtensionHydration } from "@/lib/suppress-extension-hydration";
 
 interface MagneticButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -28,6 +29,7 @@ export function MagneticButton({
 
   return (
     <button
+      {...suppressExtensionHydration}
       ref={ref}
       type="button"
       data-cursor="hover"
