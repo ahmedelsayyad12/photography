@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import type { Photo } from "@/types";
 import { useImmersiveOptional } from "@/context/ImmersiveContext";
 import { getLayoutPreset } from "@/lib/layout-engine";
+import { photoAlt } from "@/lib/photo-alt";
 import { cn } from "@/lib/utils";
 
 interface GalleryItemProps {
@@ -58,7 +59,7 @@ export function GalleryItem({ photo, index, onSelect }: GalleryItemProps) {
       >
         <Image
           src={photo.src}
-          alt={photo.title}
+          alt={photoAlt(photo)}
           fill
           className={cn(
             "object-cover transition-all duration-[1.2s] ease-out",

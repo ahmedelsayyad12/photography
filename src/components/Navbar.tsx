@@ -71,6 +71,7 @@ export function Navbar() {
                     href={link.href}
                     className="group relative text-xs tracking-[0.25em] uppercase text-[var(--muted)] transition-colors hover:text-[var(--foreground)]"
                     data-cursor="hover"
+                    aria-label={`Go to ${link.label} section`}
                   >
                     {link.label}
                     <span

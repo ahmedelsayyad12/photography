@@ -46,7 +46,8 @@ export function ImmersiveProvider({ children }: { children: React.ReactNode }) {
     () => false
   );
 
-  const [introComplete, setIntroComplete] = useState(false);
+  /** Skip intro on first paint — avoids blocking LCP/INP on mobile. */
+  const [introComplete, setIntroComplete] = useState(true);
 
   const toggleSound = useCallback((enabled: boolean) => {
     setSoundEnabledStorage(enabled);

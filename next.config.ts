@@ -13,7 +13,15 @@ const nextConfig: NextConfig = {
     imageSizes: [256, 384, 640],
   },
   experimental: {
-    optimizePackageImports: ["lucide-react", "framer-motion"],
+    optimizePackageImports: [
+      "lucide-react",
+      "framer-motion",
+      "gsap",
+      "@react-three/drei",
+    ],
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
   },
 };
 

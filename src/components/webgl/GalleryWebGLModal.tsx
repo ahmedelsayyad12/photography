@@ -7,6 +7,7 @@ import { Canvas } from "@react-three/fiber";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import type { Photo } from "@/types";
 import { categoryLabels } from "@/data/photography";
+import { photoAlt } from "@/lib/photo-alt";
 import { useImmersiveOptional } from "@/context/ImmersiveContext";
 import { useAmbientSound } from "@/hooks/useAmbientSound";
 
@@ -157,7 +158,7 @@ export function GalleryWebGLModal({
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={photo.src}
-                  alt={photo.title}
+                  alt={photoAlt(photo)}
                   className="h-full w-full object-contain"
                 />
               )}

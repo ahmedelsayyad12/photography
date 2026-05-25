@@ -14,6 +14,7 @@ import { SectionReveal } from "@/components/fx/SectionReveal";
 import { PortalTransition } from "@/components/fx/PortalTransition";
 import { GalleryTunnelSection } from "@/components/museum/GalleryTunnelSection";
 import { SiteIntro } from "@/components/seo/SiteIntro";
+import { SeoContent } from "@/components/seo/SeoContent";
 
 export default function Home() {
   return (
@@ -79,6 +80,8 @@ export default function Home() {
             <Contact />
           </SectionReveal>
         </PortalTransition>
+
+        <SeoContent />
       </main>
       <Footer />
     </>

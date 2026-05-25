@@ -20,7 +20,8 @@ export const seoKeywords = [
   "wedding photography",
   "editorial photography",
   "Ahmed Elsyaad",
-  "New York photographer",
+  "Cairo photographer",
+  "Egypt photographer",
 ];
 
 export function buildSiteMetadata(): Metadata {

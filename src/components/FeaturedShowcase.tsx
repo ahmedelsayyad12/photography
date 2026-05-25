@@ -7,6 +7,7 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useImmersiveOptional } from "@/context/ImmersiveContext";
 import { getLayoutPreset } from "@/lib/layout-engine";
 import { useMounted } from "@/hooks/useMounted";
+import { photoAlt } from "@/lib/photo-alt";
 import { cn } from "@/lib/utils";
 
 const featured = photos.filter((p) => p.featured).slice(0, 4);
@@ -72,7 +73,7 @@ export function FeaturedShowcase() {
           >
             <Image
               src={featured[0].src}
-              alt={featured[0].title}
+              alt={photoAlt(featured[0])}
               fill
               className="object-cover transition-transform duration-[1.6s] group-hover:scale-105"
               sizes="100vw"
@@ -115,7 +116,7 @@ export function FeaturedShowcase() {
               >
                 <Image
                   src={photo.src}
-                  alt={photo.title}
+                  alt={photoAlt(photo)}
                   fill
                   className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"

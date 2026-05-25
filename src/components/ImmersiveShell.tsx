@@ -2,13 +2,32 @@
 
 import dynamic from "next/dynamic";
 import { ImmersiveProvider } from "@/components/providers/ImmersiveProvider";
-import { CinematicIntro } from "@/components/CinematicIntro";
-import { DynamicLighting } from "@/components/DynamicLighting";
-import { NoiseTexture } from "@/components/NoiseTexture";
-import { SoundToggle } from "@/components/SoundToggle";
 import { ScrollVelocityLayer } from "@/components/ScrollVelocityLayer";
-import { LayoutVariantSwitcher } from "@/components/LayoutVariantSwitcher";
 import { SceneMoodProvider } from "@/context/SceneMoodContext";
+
+const CinematicIntro = dynamic(
+  () => import("@/components/CinematicIntro").then((m) => m.CinematicIntro),
+  { ssr: false }
+);
+const DynamicLighting = dynamic(
+  () => import("@/components/DynamicLighting").then((m) => m.DynamicLighting),
+  { ssr: false }
+);
+const NoiseTexture = dynamic(
+  () => import("@/components/NoiseTexture").then((m) => m.NoiseTexture),
+  { ssr: false }
+);
+const SoundToggle = dynamic(
+  () => import("@/components/SoundToggle").then((m) => m.SoundToggle),
+  { ssr: false }
+);
+const LayoutVariantSwitcher = dynamic(
+  () =>
+    import("@/components/LayoutVariantSwitcher").then(
+      (m) => m.LayoutVariantSwitcher
+    ),
+  { ssr: false }
+);
 
 const ParticleField = dynamic(
   () => import("@/components/fx/ParticleField").then((m) => m.ParticleField),

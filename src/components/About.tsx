@@ -6,7 +6,6 @@ import { siteConfig, stats, timeline } from "@/data/photography";
 import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { FloatingDepth } from "@/components/fx/FloatingDepth";
-import { CinematicText } from "@/components/fx/CinematicText";
 
 const portrait =
   "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=75";
@@ -78,13 +77,11 @@ export function About() {
             <p className="mb-3 text-xs tracking-[0.4em] uppercase text-[var(--accent)]">
               The Photographer
             </p>
-            <h2 id="about-heading">
-              <CinematicText
-                text={siteConfig.name}
-                as="span"
-                className="font-serif text-4xl leading-tight text-[var(--foreground)] md:text-6xl block"
-                splitBy="word"
-              />
+            <h2
+              id="about-heading"
+              className="font-serif text-4xl leading-tight text-[var(--foreground)] md:text-6xl"
+            >
+              About {siteConfig.name}
             </h2>
             <p className="mt-8 max-w-xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
               For over a decade, I&apos;ve been crafting visual narratives that

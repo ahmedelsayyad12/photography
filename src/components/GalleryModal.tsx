@@ -6,6 +6,7 @@ import { useCallback, useEffect, useRef } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import type { Photo } from "@/types";
 import { categoryLabels } from "@/data/photography";
+import { photoAlt } from "@/lib/photo-alt";
 
 interface GalleryModalProps {
   photo: Photo | null;
@@ -118,7 +119,7 @@ export function GalleryModal({
             <div className="relative aspect-[3/4] max-h-[70vh] w-full overflow-hidden rounded-sm md:aspect-auto md:min-h-[400px]">
               <Image
                 src={photo.src}
-                alt={photo.title}
+                alt={photoAlt(photo)}
                 fill
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, 80vw"

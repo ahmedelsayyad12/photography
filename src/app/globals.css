@@ -72,6 +72,8 @@ body {
 .section-padding {
   padding-top: clamp(5rem, 12vw, 8rem);
   padding-bottom: clamp(5rem, 12vw, 8rem);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
 }
 
 /* Grid lines overlay */

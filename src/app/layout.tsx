@@ -2,8 +2,7 @@ import { Playfair_Display, Cormorant_Garamond, DM_Sans } from "next/font/google"
 import "./globals.css";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
 import { ImmersiveShell } from "@/components/ImmersiveShell";
-import { FuturisticCursor } from "@/components/FuturisticCursor";
-import { FilmGrain } from "@/components/FilmGrain";
+import { DeferredEffects } from "@/components/DeferredEffects";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildSiteMetadata } from "@/lib/seo";
 
@@ -22,11 +21,18 @@ const dmSans = DM_Sans({
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400"],
   display: "swap",
+  preload: false,
 });
 
 export const metadata = buildSiteMetadata();
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#080808",
+};
 
 export default function RootLayout({
   children,
@@ -47,9 +53,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <SmoothScrollProvider>
-          {/* Outside ScrollVelocityLayer so fixed cursor tracks viewport correctly */}
-          <FuturisticCursor />
-          <FilmGrain />
+          <DeferredEffects />
           <ImmersiveShell>{children}</ImmersiveShell>
         </SmoothScrollProvider>
       </body>
