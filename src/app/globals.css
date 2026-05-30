@@ -191,16 +191,15 @@ body {
 }
 
 @media (min-width: 768px) {
-  .scroll-velocity-root [data-velocity-blur] {
-    transition: filter 0.2s ease-out, transform 0.25s ease-out;
-    filter: blur(calc(var(--scroll-intensity, 0) * 2px));
+  /* .scroll-velocity-root [data-velocity-blur] {
+    transition: transform 0.25s ease-out;
     transform: scale(calc(1 + var(--scroll-intensity, 0) * 0.008));
-  }
+  } */
 
-  .scroll-velocity-root [data-velocity-shift] {
+  /* .scroll-velocity-root [data-velocity-shift] {
     transition: transform 0.25s ease-out;
     transform: translateY(calc(var(--scroll-intensity, 0) * -4px));
-  }
+  } */
 }
 
 .portal-wipe {
